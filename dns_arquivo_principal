@@ -1,0 +1,13 @@
+//
+// Do any local configuration here
+//
+
+zone "expresso.local" {
+        type master;
+        file "/etc/bind/forward.expresso";
+};
+
+zone "1.0.10.in-addr.arpa"{
+        type master;
+        file "/etc/bind/reverse.expresso";
+};
