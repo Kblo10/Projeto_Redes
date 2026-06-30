@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Portal Expresso</title>
+
+        <style>
+                body{
+                        margin:0;
+                        font-family:Arial, sans-serif;
+                        background:#f4f4f4;
+                        text-align:center;
+                }
+
+                .header{
+                        background:#1c2331;
+                        color:white;
+                        padding:20px;
+                }
+                .container{
+                        margin-top:30px;
+                }
+
+                img{
+                        width:400px;
+                        border-radius:15px;
+                        box-shadow:0 0 10px rgba(0,0,0,0.3);
+                }
+
+
+                .mensagem{
+                        margin-top:20px;
+                        font-size:28px;
+                        color:#333;
+                }
+
+
+                .descricao{
+                        font-size:18px;
+                        color:#666;
+                        margin-top:10px;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="header">
+                <h1>Portal Corporativo Expresso</h1>
+        </div>
+
+                <div class="container">
+
+                        <img src="{{ url_for('static', filename='boasvindas.jpg') }}" alt="Boas Vindas">
+
+                        <div class="mensagem">
+                                Seja bem-vindo, {{ usuario }}!
+                        </div>
+
+
+                        <div class="descricao">
+                                Você autenticou com sucesso no domínio expresso.local.
+                        </div>
+                </div>
+</body>
+</html>
